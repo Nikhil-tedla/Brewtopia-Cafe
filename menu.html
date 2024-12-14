@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="Images/icon1.png" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Brewtopia - Menu</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f2f2f2;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        
+        .menu {
+            text-align: center;
+            font-size: 40px;
+            margin: 30px ;
+            color: #333;
+            
+        }
+
+        .caf, .san, .san1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+            text-transform: capitalize;
+        }
+
+        /* Tables */
+        table:not(nav table){
+            width: 60%;
+            margin: 0 auto 50px;
+            border-collapse: collapse;
+            text-align: left;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table:not(nav table) th,table:not(nav table) td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        table:not(nav table) th {
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+        }
+
+        table:not(nav table) td {
+            background-color: #fff;
+            font-size: 16px;
+            color: #333;
+        }
+
+        td:hover {
+            background-color: #f7f7f7;
+            cursor: pointer;
+            animation: bounce 0.5s ease-out;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #ccc;
+            margin: 10px 0;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Footer */
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <table>
+                <td class="image"><img src="Images/icon.png" height="50" alt="Logo"></td>
+                <td>
+                    <h1>Brewtopia</h1>
+                    <p><i>- A paradise for coffee and tea lovers.</i></p>
+                </td>
+            </table>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="menu.html" class="dropbtn">Menu</a>
+                    <div class="dropdown-content">
+                        <a href="menu.html#c">Coffee</a>
+                        <a href="menu.html#s">Snacks</a>
+                        <a href="menu.html#p">Pastries</a>
+                        <a href="menu.html#p">Desserts</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="specials.html">Specials</a>
+                <a href="Reachus.html">Reach Us</a>
+            </div>
+        </div>
+    </nav>
+<br>
+<br>
+<br>
+<br>
+    <h2 class="menu">MENU</h2>
+
+    <h6 class="caf" id="c">Coffee</h6>
+    <table>
+        <tr>
+            <th>Coffees</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td>Black Coffee</td>
+            <td>Rs: 50</td>
+        </tr>
+        <tr>
+            <td>Cold Coffee</td>
+            <td>Rs: 60</td>
+        </tr>
+        <tr>
+            <td>Americano</td>
+            <td>Rs: 70</td>
+        </tr>
+        <tr>
+            <td>Cappuccino</td>
+            <td>Rs: 80</td>
+        </tr>
+        <tr>
+            <td>Flat White</td>
+            <td>Rs: 90</td>
+        </tr>
+    </table>
+
+    <h6 class="san" id="s">Snacks</h6>
+    <table>
+        <tr>
+            <th>Snacks</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td>French Fries</td>
+            <td>Rs: 100</td>
+        </tr>
+        <tr>
+            <td>Garlic Bread</td>
+            <td>Rs: 120</td>
+        </tr>
+        <tr>
+            <td>Nachos with Cheese Dip</td>
+            <td>Rs: 150</td>
+        </tr>
+        <tr>
+            <td>Veg Sandwich</td>
+            <td>Rs: 130</td>
+        </tr>
+        <tr>
+            <td>Chicken Sandwich</td>
+            <td>Rs: 160</td>
+        </tr>
+    </table>
+
+    <h6 class="san1" id="p">Pastries and Desserts</h6>
+    <table>
+        <tr>
+            <th>Pastries and Desserts</th>
+            <th>Cost</th>
+        </tr>
+        <tr>
+            <td>Chocolate Brownie</td>
+            <td>Rs: 120</td>
+        </tr>
+        <tr>
+            <td>Muffins</td>
+            <td>Rs: 100</td>
+        </tr>
+        <tr>
+            <td>Cheese Cakes</td>
+            <td>Rs: 200</td>
+        </tr>
+        <tr>
+            <td>Tiramisu</td>
+            <td>Rs: 250</td>
+        </tr>
+        <tr>
+            <td>Ice Creams (Single Scoop)</td>
+            <td>Rs: 90</td>
+        </tr>
+    </table>
+
+    <footer>
+        <div class="lastclass">
+            <div class="contact">
+                <p><b>phone:</b>+91-9398282089</p>
+                <p><b>email:</b>cafebrew@gmail.com</p>
+            </div>
+            <div class="items">
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="specials.html">Specials</a>
+                <a href="menu.html">Menu</a>
+                <a href="contactus.html">Contact Us</a>
+                
+            </div>
+            <div class="followus">
+                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="x.com>"><i class="fa-brands fa-x-twitter"></i></a>
+                
+            </div>
+            
+
+            <p>&copy; 2024 Brewtopia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

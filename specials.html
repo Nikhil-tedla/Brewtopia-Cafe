@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Images/icon1.png" type="image/x-icon">
+    <title>Brewtopia - Specials</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+
+        } */
+        .maincontainer{
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            gap:30px;
+            height: 2000px;
+        }
+        .div1 {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0, 0.3);
+            max-width: 1000px;
+
+        }
+        .text>p{
+            position:absolute;
+            top:105px;
+            left:200px;
+
+        }
+        .im {
+            flex: 1;
+            padding-right: 0px;
+        }
+        .im img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .content {
+            flex: 3;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        .content h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .content p {
+            margin: 10px 0 0;
+            color: #666;
+            line-height: 1.6;
+        }
+        .im img:hover{
+            transform: scale(1.2);
+
+        }
+        
+        h2{
+            transition: transform 0.3s ease-in-out ;
+            width: 250px;
+        }
+        h2:hover{
+            transform: scale(1.1);
+            text-shadow: #ed0000;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <table>
+                <td class="image"><img src="Images/icon.png" height="50" alt="Logo"></td>
+                <td>
+                    <h1>Brewtopia</h1>
+                    <p><i>- A paradise for coffee and tea lovers.</i></p>
+                </td>
+            </table>
+            
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="menu.html" class="dropbtn">Menu</a>
+                    <div class="dropdown-content">
+                        <a href="menu.html#c">Coffee</a>
+                        <a href="menu.html#s">Snacks</a>
+                        <a href="menu.html#p">Pastries</a>
+                        <a href="menu.html#p">Desserts</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="specials.html">Specials</a>
+                <a href="Reachus.html">Reach Us</a>
+            </div>
+        </div>
+    </nav>
+    <div class="div1">
+    <div class="maincontainer">
+        <div class="container">
+            <div class="im">
+                <img src="Images/black_coffee.jpeg" alt="Placeholder Image">
+            </div>
+            <div class="content">
+                <h2>Special Black Coffee</h2>
+                <p>
+                    Our black coffee is brewed from premium, single-origin beans to bring out the bold flavors and rich aroma. It's a perfect choice for coffee enthusiasts who appreciate the pure, unadulterated essence of coffee.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="content" >
+                <h2>Croissant</h2>
+                <p>
+
+                Our café’s croissants are baked fresh daily, using high-quality butter for a perfectly flaky, golden crust and a soft, airy interior. They are crafted with care to deliver 
+                an authentic taste of France, pairing beautifully with your favorite coffee.
+                </p>
+            </div>
+            <div class="im r">
+                <img src="Images/crossaints.jpeg" alt="Placeholder Image">
+            </div>
+        </div>
+        <div class="container">
+            <div class="im">
+                <img src="Images/choco_lava_cake.jpeg" alt="Placeholder Image">
+            </div>
+            <div class="content">
+                <h2>Choco Lava Cake</h2>
+                <p>At our café, we craft Choco Lava Cakes with a rich, moist chocolate base filled with a luscious, molten chocolate center that oozes out with every bite. Baked fresh to
+                     perfection, it's a dessert indulgence you won't want to miss
+                </p>
+            </div>
+        </div>
+    
+        <div class="container">
+            
+            <div class="content">
+                <h2>Beer-Battered Fish and Chips</h2>
+                <p>
+                    At our café, we prepare Beer-Battered Fish and Chips by coating fresh fish fillets in a
+                     light, crisp beer batter and frying them to golden perfection. Paired with hand-cut fries and
+                      served with a zesty
+                     tartar sauce, it's a comforting classic with a gourmet twist!
+                </p>
+            </div>
+            <div class="im r">
+                <img src="Images/chips.jpeg" alt="Placeholder Image">
+            </div>
+        </div>
+        <div class="container">
+            <div class="im">
+                <img src="Images/Matchalattes.jpeg" alt="Placeholder Image">
+            </div>
+            <div class="content">
+                <h2>Matcha Lattes</h2>
+                <p>
+                    At our café, we create Matcha Lattes using premium ceremonial-grade matcha whisked
+                     to a smooth, vibrant froth. Blended with creamy milk and a touch of sweetness, 
+                     it offers a perfect harmony of earthy and velvety flavors in every sip.
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            
+            <div class="content">
+                <h2>Craft Sodas</h2>
+                <p>
+                    At our café, we craft sodas by blending fresh fruit purees, house-made syrups,
+                     and sparkling water to create refreshing, fizzy drinks. Each flavor is
+                     uniquely balanced, offering a delightful mix of sweetness, tang, and effervescence.
+                </p>
+            </div>
+            <div class="im r">
+                <img src="Images/soda.jpeg" alt="Placeholder Image">
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="lastclass">
+            <div class="contact">
+                <p><b>phone:</b>+91-9398282089</p>
+                <p><b>email:</b>cafebrew@gmail.com</p>
+            </div>
+            <div class="items">
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="specials.html">Specials</a>
+                <a href="menu.html">Menu</a>
+                <a href="contactus.html">Contact Us</a>
+                
+            </div>
+            <div class="followus">
+                <a href="instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href="facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="x.com>"><i class="fa-brands fa-x-twitter"></i></a>
+                
+            </div>
+            
+
+            <p>&copy; 2024 Brewtopia. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
