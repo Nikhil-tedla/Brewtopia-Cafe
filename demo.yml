@@ -1,1 +1,63 @@
-Nothing
+variables:
+  - group: Pantheon
+  - name: vmImageName
+    value: 'ubuntu-latest'
+  - name: phpVersion
+    value: '8.1'
+  - name: pantheonGitKnownHosts
+    value: |
+        # codeserver.dev.139caddd-86b9-4f34-b9d8-771d44c55858.drush.in:2222 SSH-2.0-Pantheon-SSH
+        [codeserver.dev.139caddd-86b9-4f
+      
+
+trigger: none
+pr: none
+schedules:
+  - cron: '0 */6 * * *'
+    displayName: Drupal cron
+    branches:
+      include:
+        - pantheon-master
+    always: true
+
+#This build should run.
+stages:
+  - stage: Cron
+    jobs:
+      - job: runCron
+        steps:
+          - checkout: none
+          
+
+          - task: Bash@3
+            displayName: 'Setup PHP and MySQL'
+            inputs:
+              targetType: 'inline'
+              script: |
+              #  sudo update-alternatives --set php /usr/bin/php$(phpVersion)
+              #  sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
+              #  sudo update-alternatives --set phpdbg /usr/bin/phpdbg$(phpVersion)
+              #  sudo update-alternatives --set php-cgi /usr/bin/php-cgi$(phpVersion)
+              #  sudo update-alternatives --set phar.phar /usr/bin/phar.phar$(phpVersion)
+
+          - task: Bash@3
+            displayName: 'Install Terminus'
+            inputs:
+              targetType: 'inline'
+              script: |
+                mkdir -p ~/terminus && cd ~/terminus
+                curl -L https://github.com/pantheon-systems/terminus/releases/download/3.3.0/terminus.phar --output terminus
+                chmod +x terminus
+                ./terminus self:update
+                sudo ln -s ~/terminus/terminus /usr/local/bin/terminus
+
+          - task: Bash@3
+            displayName: 'Run cron'
+            env:
+              TERMINUS_MACHINE_TOKEN: $(abcd)
+            inputs:
+              targetType: 'inline'
+              script: |
+                terminus auth:login --machine-token="${TERMINUS_MACHINE_TOKEN}"
+                terminus drush nokia-main-eu.live -- cron
+                
