@@ -1,12 +1,20 @@
 trigger: none
 pr: none
+
 schedules:
   - cron: "*/2 * * * *"
     displayName: "Run every 2 minutes"
     always: true
+    branches:
+      include:
+        - master
 
-
-#This build should run.
 stages:
   - stage: Cron
-    
+    displayName: "Cron Test Stage"
+    jobs:
+      - job: TestCron
+        displayName: "Test Cron Job"
+        steps:
+          - script: echo "Cron triggered at $(date)"
+            displayName: "Print timestamp"
