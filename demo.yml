@@ -2,8 +2,8 @@ trigger: none
 pr: none
 
 schedules:
-  - cron: "*/2 * * * *"  # Runs every day at midnight UTC
-    displayName: Daily Dummy Run
+  - cron: "*/2 * * * *"
+    displayName: "Run every 2 minutes"
     always: true
     branches:
       include:
@@ -11,10 +11,6 @@ schedules:
 
 jobs:
 - job: DummyServerJob
-  displayName: "Run without Agent"
-  pool: selfHosted
-  steps:
-    - task: Delay@1
-      displayName: "Simulate job with Delay"
-      inputs:
-        delayForSeconds: 5
+  displayName: "Dummy schedule test"
+  pool: server
+  steps: []
