@@ -1,22 +1,20 @@
 trigger: none
 pr: none
-pool:
-  name: SelfHosted
 
 schedules:
-  - cron: "*/2 * * * *"
-    displayName: "Run every 2 minutes"
+  - cron: "*/2 * * * *"  # Runs every day at midnight UTC
+    displayName: Daily Dummy Run
     always: true
     branches:
       include:
-        - master
+        - main
 
-stages:
-  - stage: Cron
-    displayName: "Cron Test Stage"
-    jobs:
-      - job: TestCron
-        displayName: "Test Cron Job"
-        steps:
-          - script: echo "Cron triggered at $(date)"
-            displayName: "Print timestamp"
+jobs:
+- job: DummyServerJob
+  displayName: "Run without Agent"
+  pool: selfHosted
+  steps:
+    - task: Delay@1
+      displayName: "Simulate job with Delay"
+      inputs:
+        delayForSeconds: 5
